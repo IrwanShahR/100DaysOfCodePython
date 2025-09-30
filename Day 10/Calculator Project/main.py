@@ -20,10 +20,9 @@ operations = {
     "*": multiply,
     "/": divide,
 }
-continue_calculating = True
-new = True
 
-while new:
+def calculator():
+    continue_calculating = True
     num1 = float(input("What's the first number?: "))
     for i in operations:
         print(i)
@@ -43,6 +42,10 @@ while new:
             for i in operations:
                 print(i)
         else:
-            break
+            continue_calculating = False
+            print("\n" * 20)
+            calculator()
 
+
+calculator()
 
